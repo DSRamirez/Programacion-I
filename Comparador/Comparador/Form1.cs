@@ -45,7 +45,7 @@ namespace Comparador
                 VTasaNacion = (VMonto * (25 / 365 * 30 / 100) + VMonto);
 
                 // if (chkGalicia.Checked)
-                // {
+                // {jndksnand
                 //     (VMonto * (21.94 / 365 * 30 / 100) + VMonto);
                 //}
             }
