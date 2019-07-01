@@ -36,7 +36,6 @@
             this.chkHSBC = new System.Windows.Forms.CheckBox();
             this.chkNacion = new System.Windows.Forms.CheckBox();
             this.chkMacro = new System.Windows.Forms.CheckBox();
-            this.chkTodos = new System.Windows.Forms.CheckBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -48,7 +47,13 @@
             this.rbt90dias = new System.Windows.Forms.RadioButton();
             this.rbt60dias = new System.Windows.Forms.RadioButton();
             this.rbt30dias = new System.Windows.Forms.RadioButton();
+            this.lblG = new System.Windows.Forms.Label();
+            this.lblH = new System.Windows.Forms.Label();
+            this.lblN = new System.Windows.Forms.Label();
+            this.lblM = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -72,16 +77,16 @@
             // 
             this.lblBancos.AutoSize = true;
             this.lblBancos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBancos.Location = new System.Drawing.Point(344, 158);
+            this.lblBancos.Location = new System.Drawing.Point(344, 138);
             this.lblBancos.Name = "lblBancos";
-            this.lblBancos.Size = new System.Drawing.Size(67, 20);
+            this.lblBancos.Size = new System.Drawing.Size(145, 20);
             this.lblBancos.TabIndex = 8;
-            this.lblBancos.Text = "Bancos ";
+            this.lblBancos.Text = "Seleccione Bancos";
             // 
             // chkGalicia
             // 
             this.chkGalicia.AutoSize = true;
-            this.chkGalicia.Location = new System.Drawing.Point(348, 196);
+            this.chkGalicia.Location = new System.Drawing.Point(6, 19);
             this.chkGalicia.Name = "chkGalicia";
             this.chkGalicia.Size = new System.Drawing.Size(58, 17);
             this.chkGalicia.TabIndex = 9;
@@ -91,7 +96,7 @@
             // chkHSBC
             // 
             this.chkHSBC.AutoSize = true;
-            this.chkHSBC.Location = new System.Drawing.Point(348, 226);
+            this.chkHSBC.Location = new System.Drawing.Point(6, 49);
             this.chkHSBC.Name = "chkHSBC";
             this.chkHSBC.Size = new System.Drawing.Size(55, 17);
             this.chkHSBC.TabIndex = 10;
@@ -101,7 +106,7 @@
             // chkNacion
             // 
             this.chkNacion.AutoSize = true;
-            this.chkNacion.Location = new System.Drawing.Point(348, 259);
+            this.chkNacion.Location = new System.Drawing.Point(6, 82);
             this.chkNacion.Name = "chkNacion";
             this.chkNacion.Size = new System.Drawing.Size(60, 17);
             this.chkNacion.TabIndex = 11;
@@ -111,22 +116,12 @@
             // chkMacro
             // 
             this.chkMacro.AutoSize = true;
-            this.chkMacro.Location = new System.Drawing.Point(348, 291);
+            this.chkMacro.Location = new System.Drawing.Point(6, 114);
             this.chkMacro.Name = "chkMacro";
             this.chkMacro.Size = new System.Drawing.Size(56, 17);
             this.chkMacro.TabIndex = 12;
             this.chkMacro.Text = "Macro";
             this.chkMacro.UseVisualStyleBackColor = true;
-            // 
-            // chkTodos
-            // 
-            this.chkTodos.AutoSize = true;
-            this.chkTodos.Location = new System.Drawing.Point(348, 324);
-            this.chkTodos.Name = "chkTodos";
-            this.chkTodos.Size = new System.Drawing.Size(56, 17);
-            this.chkTodos.TabIndex = 13;
-            this.chkTodos.Text = "Todos";
-            this.chkTodos.UseVisualStyleBackColor = true;
             // 
             // btnAceptar
             // 
@@ -178,11 +173,11 @@
             this.lblError2.AutoSize = true;
             this.lblError2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError2.ForeColor = System.Drawing.Color.Red;
-            this.lblError2.Location = new System.Drawing.Point(417, 165);
+            this.lblError2.Location = new System.Drawing.Point(346, 167);
             this.lblError2.Name = "lblError2";
-            this.lblError2.Size = new System.Drawing.Size(222, 12);
+            this.lblError2.Size = new System.Drawing.Size(228, 12);
             this.lblError2.TabIndex = 19;
-            this.lblError2.Text = "* Debe seleccionar al menos un banco.";
+            this.lblError2.Text = "* Debe seleccionar al menos dos banco.";
             this.lblError2.Visible = false;
             // 
             // label2
@@ -251,6 +246,62 @@
             this.rbt30dias.Text = "Plazo fijo a 30 días";
             this.rbt30dias.UseVisualStyleBackColor = true;
             // 
+            // lblG
+            // 
+            this.lblG.AutoSize = true;
+            this.lblG.Location = new System.Drawing.Point(68, 15);
+            this.lblG.Name = "lblG";
+            this.lblG.Size = new System.Drawing.Size(35, 13);
+            this.lblG.TabIndex = 20;
+            this.lblG.Text = "label3";
+            this.lblG.Visible = false;
+            // 
+            // lblH
+            // 
+            this.lblH.AutoSize = true;
+            this.lblH.Location = new System.Drawing.Point(68, 49);
+            this.lblH.Name = "lblH";
+            this.lblH.Size = new System.Drawing.Size(35, 13);
+            this.lblH.TabIndex = 21;
+            this.lblH.Text = "label4";
+            this.lblH.Visible = false;
+            // 
+            // lblN
+            // 
+            this.lblN.AutoSize = true;
+            this.lblN.Location = new System.Drawing.Point(68, 82);
+            this.lblN.Name = "lblN";
+            this.lblN.Size = new System.Drawing.Size(35, 13);
+            this.lblN.TabIndex = 22;
+            this.lblN.Text = "label5";
+            this.lblN.Visible = false;
+            // 
+            // lblM
+            // 
+            this.lblM.AutoSize = true;
+            this.lblM.Location = new System.Drawing.Point(68, 114);
+            this.lblM.Name = "lblM";
+            this.lblM.Size = new System.Drawing.Size(35, 13);
+            this.lblM.TabIndex = 23;
+            this.lblM.Text = "label6";
+            this.lblM.Visible = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.chkNacion);
+            this.groupBox1.Controls.Add(this.lblM);
+            this.groupBox1.Controls.Add(this.chkGalicia);
+            this.groupBox1.Controls.Add(this.lblN);
+            this.groupBox1.Controls.Add(this.chkHSBC);
+            this.groupBox1.Controls.Add(this.lblH);
+            this.groupBox1.Controls.Add(this.chkMacro);
+            this.groupBox1.Controls.Add(this.lblG);
+            this.groupBox1.Location = new System.Drawing.Point(348, 186);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(281, 146);
+            this.groupBox1.TabIndex = 24;
+            this.groupBox1.TabStop = false;
+            // 
             // Comparador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -258,6 +309,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(918, 450);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.rbt365dias);
             this.Controls.Add(this.rbt180dias);
             this.Controls.Add(this.rbt90dias);
@@ -267,11 +319,6 @@
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.chkTodos);
-            this.Controls.Add(this.chkMacro);
-            this.Controls.Add(this.chkNacion);
-            this.Controls.Add(this.chkHSBC);
-            this.Controls.Add(this.chkGalicia);
             this.Controls.Add(this.lblBancos);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtMonto);
@@ -282,6 +329,8 @@
             this.Name = "Comparador";
             this.Text = "Comparador";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,7 +345,6 @@
         private System.Windows.Forms.CheckBox chkHSBC;
         private System.Windows.Forms.CheckBox chkNacion;
         private System.Windows.Forms.CheckBox chkMacro;
-        private System.Windows.Forms.CheckBox chkTodos;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -308,6 +356,11 @@
         private System.Windows.Forms.RadioButton rbt90dias;
         private System.Windows.Forms.RadioButton rbt60dias;
         private System.Windows.Forms.RadioButton rbt30dias;
+        private System.Windows.Forms.Label lblG;
+        private System.Windows.Forms.Label lblH;
+        private System.Windows.Forms.Label lblN;
+        private System.Windows.Forms.Label lblM;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 
