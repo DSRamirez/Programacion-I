@@ -93,11 +93,6 @@ namespace Comparador
                     {
                         lblN.Visible = false;
                     }
-                //}
-                //else
-                //{
-                //    lblG.Visible = false;
-                //}
 
             }
             if (rbt60dias.Checked)
@@ -236,31 +231,58 @@ namespace Comparador
                 Convert.ToDouble(VTasaMacro);
                 Convert.ToDouble(VTasaNacion);
 
-                if (chkGalicia.Checked && VTasaGalicia > VTasaHSBC && VTasaGalicia > VTasaMacro && VTasaGalicia > VTasaNacion)
+                if (VTasaGalicia > VTasaHSBC && VTasaGalicia > VTasaMacro && VTasaGalicia > VTasaNacion)
                 {
+                    //chkGalicia.Checked && 
                     MessageBox.Show("El banco que te conviene es: GALICIA ");
+
                 }
-                else
+
+                if (VTasaHSBC > VTasaGalicia && VTasaHSBC > VTasaMacro && VTasaHSBC > VTasaNacion)
                 {
-                    if (chkHSBC.Checked && VTasaHSBC > VTasaGalicia && VTasaHSBC > VTasaMacro && VTasaHSBC > VTasaNacion)
-                    {
-                        MessageBox.Show("El banco que te conviene es: HSBC ");
-                    }
-                    else
-                    {
-                        if (chkMacro.Checked && VTasaMacro > VTasaGalicia && VTasaMacro > VTasaHSBC && VTasaMacro > VTasaNacion)
-                        {
-                            MessageBox.Show("El banco que te conviene es: MACRO ");
-                        }
-                        else
-                        {
-                            if (chkNacion.Checked && VTasaNacion > VTasaGalicia && VTasaNacion > VTasaHSBC && VTasaNacion > VTasaMacro)
-                            {
-                                MessageBox.Show("El banco que te conviene es: NACIÓN ");
-                            }
-                        }
-                    }
+                    //chkHSBC.Checked &&
+                    MessageBox.Show("El banco que te conviene es: HSBC ");
                 }
+
+                if (VTasaMacro > VTasaGalicia && VTasaMacro > VTasaHSBC && VTasaMacro > VTasaNacion)
+                {
+                    //chkMacro.Checked && 
+                    MessageBox.Show("El banco que te conviene es: MACRO ");
+                }
+
+                if (VTasaNacion > VTasaGalicia && VTasaNacion > VTasaHSBC && VTasaNacion > VTasaMacro)
+                {
+                    //chkNacion.Checked && 
+                    MessageBox.Show("El banco que te conviene es: NACIÓN ");
+                }
+
+
+
+                //if (chkGalicia.Checked && VTasaGalicia > VTasaHSBC && VTasaGalicia > VTasaMacro && VTasaGalicia > VTasaNacion)
+                //{
+                //    MessageBox.Show("El banco que te conviene es: GALICIA ");
+                //}
+                //else
+                //{
+                //    if (chkHSBC.Checked && VTasaHSBC > VTasaGalicia && VTasaHSBC > VTasaMacro && VTasaHSBC > VTasaNacion)
+                //    {
+                //        MessageBox.Show("El banco que te conviene es: HSBC ");
+                //    }
+                //    else
+                //    {
+                //        if (chkMacro.Checked && VTasaMacro > VTasaGalicia && VTasaMacro > VTasaHSBC && VTasaMacro > VTasaNacion)
+                //        {
+                //            MessageBox.Show("El banco que te conviene es: MACRO ");
+                //        }
+                //        else
+                //        {
+                //            if (chkNacion.Checked && VTasaNacion > VTasaGalicia && VTasaNacion > VTasaHSBC && VTasaNacion > VTasaMacro)
+                //            {
+                //                MessageBox.Show("El banco que te conviene es: NACIÓN ");
+                //            }
+                //        }
+                //    }
+                //}
 
             }
             else

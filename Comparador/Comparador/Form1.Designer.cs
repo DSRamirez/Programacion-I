@@ -79,9 +79,9 @@
             this.lblBancos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBancos.Location = new System.Drawing.Point(344, 138);
             this.lblBancos.Name = "lblBancos";
-            this.lblBancos.Size = new System.Drawing.Size(145, 20);
+            this.lblBancos.Size = new System.Drawing.Size(155, 20);
             this.lblBancos.TabIndex = 8;
-            this.lblBancos.Text = "Seleccione Bancos";
+            this.lblBancos.Text = "Bancos comparados";
             // 
             // chkGalicia
             // 
